@@ -16,7 +16,81 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <head>
+        <meta charSet="utf-8" />
+        <meta
+          name="viewport"
+          content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0"
+        />
+        <title>
+          Dashboard - Analytics | Sneat - Bootstrap 5 HTML Admin Template - Pro
+        </title>
+        <meta name="description" content="" />
+        {/* Favicon */}
+        <link
+          rel="icon"
+          type="image/x-icon"
+          href="/assets/img/favicon/favicon.ico"
+        />
+        {/* Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap"
+          rel="stylesheet"
+        />
+        {/* Icons. Uncomment required icon fonts */}
+        <link rel="stylesheet" href="/assets/vendor/fonts/boxicons.css" />
+        {/* Core CSS */}
+        <link
+          rel="stylesheet"
+          href="/assets/vendor/css/core.css"
+          className="template-customizer-core-css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/vendor/css/theme-default.css"
+          className="template-customizer-theme-css"
+        />
+        <link rel="stylesheet" href="/assets/css/demo.css" />
+        {/* Vendors CSS */}
+        <link
+          rel="stylesheet"
+          href="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.css"
+        />
+         <link
+          rel="stylesheet"
+          href="/assets/vendor/css/pages/page-auth.css"
+        />
+        <link
+          rel="stylesheet"
+          href="/assets/vendor/libs/apex-charts/apex-charts.css"
+        />
+        <script src="../assets/vendor/js/helpers.js"></script>
+        <script src="/assets/js/config.js"></script>
+      </head>
+      <body>
+        {children}
+
+        {/* Core JS */}
+        <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+        <script src="/assets/vendor/libs/jquery/jquery.js"></script>
+        <script src="/assets/vendor/libs/popper/popper.js"></script>
+        <script src="/assets/vendor/js/bootstrap.js"></script>
+        <script src="/assets/vendor/libs/perfect-scrollbar/perfect-scrollbar.js"></script>
+
+        <script src="/assets/vendor/js/menu.js"></script>
+        <script src="/assets/vendor/libs/apex-charts/apexcharts.js"></script>
+        <script src="/assets/js/main.js"></script>
+        <script src="/assets/js/dashboards-analytics.js"></script>
+        <script async defer src="https://buttons.github.io/buttons.js"></script>
+        {/* build:js assets/vendor/js/core.js */}
+        {/* endbuild */}
+        {/* Vendors JS */}
+        {/* Main JS */}
+        {/* Page JS */}
+        {/* Place this tag in your head or just before your close body tag. */}
+      </body>
     </html>
   );
 }
