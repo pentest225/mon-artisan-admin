@@ -1,3 +1,5 @@
+import { createProduct } from "@/app/libs/actions";
+
 export default function Page() {
   return (
     <>
@@ -12,7 +14,7 @@ export default function Page() {
               <h5 className="card-header">Ajoutez un nouveau produit</h5>
               <hr className="my-0" />
               <div className="card-body">
-                <form>
+                <form action={createProduct}>
                   <div className="row">
                     <div className="col-md-6">
                       {/* CATEGORIE  */}
@@ -27,6 +29,7 @@ export default function Page() {
                           className="form-select"
                           id="exampleFormControlSelect1"
                           aria-label="Default select example"
+                          name="productCategorie"
                         >
                           <option selected={false}>
                             Open this select menu
@@ -46,6 +49,7 @@ export default function Page() {
                           type="text"
                           className="form-control"
                           id="productName"
+                          name="productName"
                           placeholder=""
                           aria-describedby="defaultFormControlHelp"
                         />
@@ -63,6 +67,7 @@ export default function Page() {
                           className="form-control"
                           id="productDesciption"
                           rows={3}
+                          name="productDesciption"
                           defaultValue={""}
                         />
                       </div>
@@ -79,6 +84,7 @@ export default function Page() {
                             className="form-control"
                             id="productPrice"
                             placeholder=""
+                            name="price"
                           />
                         </div>
                         {/* END PRICE */}
@@ -95,6 +101,7 @@ export default function Page() {
                             className="form-control"
                             id="productQuantitie"
                             placeholder=""
+                            name="quantitie"
                           />
                         </div>
 
@@ -107,10 +114,7 @@ export default function Page() {
                       {/* MAIN IMAGE */}
                       <div className="mb-3">
                         <div className="row flew">
-                          <label
-                            htmlFor="productQuantitie"
-                            className="form-label "
-                          >
+                          <label htmlFor="mainImage" className="form-label ">
                             Image Principale
                           </label>
                           <p className="text-muted">
@@ -121,7 +125,8 @@ export default function Page() {
                         <input
                           type="file"
                           className="form-control"
-                          id="productQuantitie"
+                          id="mainImage"
+                          name="mainImage"
                           placeholder="Image de presentation du produit"
                         />
                       </div>
@@ -129,10 +134,7 @@ export default function Page() {
                       {/* BIG IMAGE */}
                       <div className="mb-3">
                         <div className="row flew">
-                          <label
-                            htmlFor="productQuantitie"
-                            className="form-label"
-                          >
+                          <label htmlFor="bigImage" className="form-label">
                             Image Grand format
                           </label>
                           <p className="text-muted">
@@ -143,29 +145,32 @@ export default function Page() {
                         <input
                           type="file"
                           className="form-control"
-                          id="productQuantitie"
+                          id="bigImage"
+                          name="bigImage"
                           placeholder="Image de presentation du produit"
                         />
                       </div>
                       {/* END BIG IMAGE */}
                       <div className="mb-3">
                         <div className="row flew">
-                          <label
-                            htmlFor="productQuantitie"
-                            className="form-label "
-                          >
+                          <label htmlFor="otherImages" className="form-label ">
                             Autre images
                           </label>
                         </div>
                         <input
                           type="file"
                           className="form-control"
-                          id="productQuantitie"
-                          multiple ={true} 
-                          placeholder="Image de presentation du produit"
+                          id="otherImages"
+                          name="otherImages"
+                          multiple={true}
                         />
                       </div>
-           
+                    </div>
+
+                    <div className="col-md-6 md">
+                      <button type="submit" className="btn btn-primary me-2">
+                        Enregistre le produit
+                      </button>
                     </div>
                   </div>
                 </form>
